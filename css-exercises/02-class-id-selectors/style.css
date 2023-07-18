@@ -1,0 +1,15 @@
+p {
+    background-color: #ffb6c1;
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+.class1 {
+    color: blue;
+    font-size: 36px;
+}
+
+.class2 {
+    background-color: lightgreen;
+    font-size: 24px;
+    font-weight: bold;
+}
