@@ -1,0 +1,171 @@
+body {
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    padding: 16px;
+    color: #F9FAF8;
+}
+
+.header-links {
+    padding: 16px;
+}
+
+.header,
+.footer,
+.header-links {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.header,
+.footer,
+.intro {
+    background-color: #1F2937;
+}
+
+.footer {
+    margin-top: auto;
+    justify-content: center;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-bottom: 50px;
+}
+
+.intro-text {
+    width: 400px;
+    padding-right: 100px;
+}
+
+.image1 {
+    width: 250px;
+    height: auto;
+}
+
+.bigcaption {
+    font-size: 48px;
+    font-style: bold;
+    color: #F9FAF8;
+}
+
+.caption {
+    font-size: 18px;
+    color: #F9FAF8;
+}
+
+.sign-up {
+    background-color: purple;
+    color: white;
+    flex-grow: 0;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.michael-img,
+.dwight-img,
+.jim-img,
+.creed-img,
+.kevin-img {
+    height: 100px;
+    width: 100px;
+    border: 5px solid purple;
+}
+
+.michael,
+.dwight,
+.jim,
+.creed,
+.kevin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+.info-title {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    padding-bottom: 50px;
+}
+
+.characters {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.quote {
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E7EB;
+    color: #1F2937;
+}
+
+.bigquote {
+    font-size: 36px;
+    font-style: italic;
+}
+
+.author {
+    padding-top: 150px;
+}
+
+.call-to-action {
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-box {
+    height: 100px;
+    width: 700px;
+    background-color: blue;
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.call-text {
+    width: 250px;
+    padding-left: 50px;
+}
+
+.call-sign-up {
+    margin-right: 50px;
+}
+
+.big-call {
+    font-size: 20px;
+    font-weight: bold;
+}
