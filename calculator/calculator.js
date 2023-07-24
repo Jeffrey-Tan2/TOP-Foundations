@@ -17,6 +17,8 @@ const minus = document.getElementById("minus");
 const multiply = document.getElementById("multiply");
 const divide = document.getElementById("divide");
 const equal = document.getElementById("equal");
+const dot = document.getElementById("dot");
+
 let total = 0;
 let input = 0;
 let firstNumber = false;
@@ -36,21 +38,26 @@ function performOp(no1, no2, op) {
     }
 }
 
+dot.addEventListener("click", () => {
+    display.innerHTML += ".";
+})
+
 equal.addEventListener("click", () => {
-    if (input == 0 && firstNumber && operator == "divide") {
+    input = parseFloat(display.innerHTML);
+    if (input == 0 && operator == "divide") {
         alert("Can't divide by zero!");
         return;
     }
-    input = parseInt(display.innerHTML);
+    topDisplay.innerHTML += input + " =";
     display.innerHTML = performOp(total, input, operator);
 })
 
 add.addEventListener("click", () => {
     if (firstNumber == false) {
-        total = parseInt(display.innerHTML);
+        total = parseFloat(display.innerHTML);
         firstNumber = true;
     } else {
-        input = parseInt(display.innerHTML);
+        input = parseFloat(display.innerHTML);
         total = performOp(total, input, operator);
     }
     display.innerHTML = "";
@@ -60,10 +67,10 @@ add.addEventListener("click", () => {
 
 minus.addEventListener("click", () => {
     if (firstNumber == false) {
-        total = parseInt(display.innerHTML);
+        total = parseFloat(display.innerHTML);
         firstNumber = true;
     } else {
-        input = parseInt(display.innerHTML);
+        input = parseFloat(display.innerHTML);
         total = performOp(total, input, operator);
     }
     display.innerHTML = "";
@@ -73,10 +80,10 @@ minus.addEventListener("click", () => {
 
 multiply.addEventListener("click", () => {
     if (firstNumber == false) {
-        total = parseInt(display.innerHTML);
+        total = parseFloat(display.innerHTML);
         firstNumber = true;
     } else {
-        input = parseInt(display.innerHTML);
+        input = parseFloat(display.innerHTML);
         total = performOp(total, input, operator);
     }
     display.innerHTML = "";
@@ -85,15 +92,15 @@ multiply.addEventListener("click", () => {
 })
 
 divide.addEventListener("click", () => {
-    if (input == 0 && firstNumber) {
-        alert("Can't divide by zero!");
-        return;
-    }
     if (firstNumber == false) {
-        total = parseInt(display.innerHTML);
+        total = parseFloat(display.innerHTML);
         firstNumber = true;
     } else {
-        input = parseInt(display.innerHTML);
+        input = parseFloat(display.innerHTML);
+        if (input == 0) {
+            alert("Can't divide by zero!");
+            return;
+        }
         total = performOp(total, input, operator);
     }
     display.innerHTML = "";
